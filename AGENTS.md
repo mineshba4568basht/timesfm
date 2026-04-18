@@ -34,3 +34,9 @@ pytest v1/tests/
 ```
 
 See `README.md` for full developer setup.
+
+## Personal notes
+
+- I'm using this primarily for experimenting with electricity demand forecasting.
+- The `v1/` notebooks are a good starting point — `tutorial.ipynb` in particular.
+- TODO: try fine-tuning on a custom dataset once I get the training pipeline working.
