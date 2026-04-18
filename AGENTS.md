@@ -40,3 +40,4 @@ See `README.md` for full developer setup.
 - I'm using this primarily for experimenting with electricity demand forecasting.
 - The `v1/` notebooks are a good starting point — `tutorial.ipynb` in particular.
 - TODO: try fine-tuning on a custom dataset once I get the training pipeline working.
+- NOTE: when loading the model locally, I've been using `backend="cpu"` to avoid CUDA issues on my dev machine — swap to `"gpu"` before any serious benchmarking.
