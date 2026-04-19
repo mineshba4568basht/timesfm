@@ -43,3 +43,4 @@ See `README.md` for full developer setup.
 - NOTE: when loading the model locally, I've been using `backend="cpu"` to avoid CUDA issues on my dev machine — swap to `"gpu"` before any serious benchmarking.
 - NOTE: set `forecast_context_len=512` when working with hourly electricity data — the default 128 was too short and hurt accuracy noticeably on my datasets.
 - NOTE: set `num_layers=20` and `model_dims=1280` when loading the 200m checkpoint — easy to accidentally load the wrong config and get silent garbage outputs.
+- NOTE: set `forecast_context_len=2048` for daily data spanning multiple years — 512 is fine for hourly but undershoots on longer daily series with strong yearly seasonality.
