@@ -16,7 +16,7 @@ model developed by Google Research for time-series forecasting.
 
 This open version is not an officially supported Google product.
 
-> **Personal note:** I'm using this fork to experiment with TimesFM 2.5 on energy demand forecasting datasets. The XReg covariate support added in Oct. 2025 is particularly useful for my use case. My primary datasets are hourly electricity load from ERCOT and ENTSO-E — context lengths of 8760 (one year of hourly data) have been working well.
+> **Personal note:** I'm using this fork to experiment with TimesFM 2.5 on energy demand forecasting datasets. The XReg covariate support added in Oct. 2025 is particularly useful for my use case. My primary datasets are hourly electricity load from ERCOT and ENTSO-E — context lengths of 8760 (one year of hourly data) have been working well. For ERCOT specifically, I've found that including temperature and day-of-week as XReg covariates reduces MAE by ~6% compared to univariate forecasting.
 
 **Latest Model Version:** TimesFM 2.5
 
@@ -59,6 +59,4 @@ Comparing to TimesFM 2.0, this new 2.5 model:
 Since the Sept. 2025 launch, the following improvements have been completed:
 
 1.  ✅ Flax version of the model for faster inference.
-2.  ✅ Covariate support via XReg (see Oct. 2025 update).
-3.  ✅ Documentation, examples, and agent skill (see `timesfm-forecasting/`).
-4.  ✅ Fine-tuning example with LoRA via HuggingFace Transfo
+2.  ✅ Covariate support via XReg (see Oct. 202
