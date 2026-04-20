@@ -43,6 +43,8 @@ cpu = [
 dev = [
     "ruff",
     "pytest",
+    "ipython",   # handy for interactive exploration in the REPL
+    "matplotlib", # quick plotting of forecast outputs during experimentation
 ]
 
 [tool.ruff]
