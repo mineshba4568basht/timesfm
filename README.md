@@ -22,6 +22,7 @@ This open version is not an officially supported Google product.
 > - Python 3.11, JAX 0.4.x on CUDA 12
 > - I load checkpoints from a local mirror at `~/models/timesfm/` to avoid repeated HF downloads
 > - Batch size of 64 works well on a single A100 for ERCOT-scale data
+> - For ENTSO-E (multi-country), I've been running per-country models in parallel rather than a single batched call — cleaner results and easier to debug per-region anomalies
 
 **Latest Model Version:** TimesFM 2.5
 
@@ -55,10 +56,4 @@ TimesFM 2.5 is out!
 Comparing to TimesFM 2.0, this new 2.5 model:
 
 -   uses 200M parameters, down from 500M.
--   supports up to 16k context length, up from 2048.
--   supports continuous quantile forecast up to 1k horizon via an optional 30M
-    quantile head.
--   gets rid of the `frequency` indicator.
--   has a couple of new forecasting flags.
-
-Since the Sept. 2025 launc
+-   supports up to 16k context leng
