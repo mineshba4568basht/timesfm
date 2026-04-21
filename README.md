@@ -23,6 +23,7 @@ This open version is not an officially supported Google product.
 > - I load checkpoints from a local mirror at `~/models/timesfm/` to avoid repeated HF downloads
 > - Batch size of 64 works well on a single A100 for ERCOT-scale data
 > - For ENTSO-E (multi-country), I've been running per-country models in parallel rather than a single batched call — cleaner results and easier to debug per-region anomalies
+> - **Update (Apr. 2026):** Switched to LoRA fine-tuning (rank=16, alpha=32) on 2 years of ERCOT data — further ~4% MAE improvement on top of XReg gains. See [`examples/finetuning/`](timesfm-forecasting/examples/finetuning/) for the config I'm using.
 
 **Latest Model Version:** TimesFM 2.5
 
@@ -47,13 +48,3 @@ Huge shoutout to [@borealBytes](https://github.com/borealBytes) for adding the s
 ## Update - Oct. 29, 2025
 
 Added back the covariate support through XReg for TimesFM 2.5.
-
-
-## Update - Sept. 15, 2025
-
-TimesFM 2.5 is out!
-
-Comparing to TimesFM 2.0, this new 2.5 model:
-
--   uses 200M parameters, down from 500M.
--   supports up to 16k context leng
