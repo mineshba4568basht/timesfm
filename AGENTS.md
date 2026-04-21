@@ -44,3 +44,4 @@ See `README.md` for full developer setup.
 - NOTE: set `forecast_context_len=512` when working with hourly electricity data — the default 128 was too short and hurt accuracy noticeably on my datasets.
 - NOTE: set `num_layers=20` and `model_dims=1280` when loading the 200m checkpoint — easy to accidentally load the wrong config and get silent garbage outputs.
 - NOTE: set `forecast_context_len=2048` for daily data spanning multiple years — 512 is fine for hourly but undershoots on longer daily series with strong yearly seasonality.
+- NOTE: set `horizon_len=24` for day-ahead electricity forecasting (hourly resolution) — the default horizon was too short for my use case and I kept forgetting to override it each session.
